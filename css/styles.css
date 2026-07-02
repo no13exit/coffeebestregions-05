@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Dancing+Script:wght@400..700&family=Libertinus+Keyboard&family=Ribeye+Marrow&display=swap');
+
 .header {
     margin-top: 0;
     background-image: url(../img/1.jpg);
@@ -6,10 +8,22 @@
     background-position: center;
     background-repeat: no-repeat;
 }
-
+body {
+    margin: 0;
+}
 h1 {
-    font-family: "Patrick Hand", cursive;
+    font-family: "Covered by your Grace", cursive;
     font-size: 64px;
     text-align: center;
     color: darkgreen;
 }
+
+h2 {
+    font-family: "Libertinus Keyboard", system-ui;
+    text-align: center;
+}
+
+.wiki {
+    font-family: "Ribeye Marrow", serif;
+}
+
