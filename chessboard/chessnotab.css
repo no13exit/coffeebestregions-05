@@ -1,0 +1,22 @@
+.row1, .row2 {
+    font-size: 0;
+}
+
+.white, .black {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.white {
+    background-color: white;
+}
+
+.black {
+    background-color: black;
+}
+
+.board {
+    width: 160px;
+    border: 1px solid black;
+}
