@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 .white {
     color: white;
     background-color: white;
@@ -17,4 +21,5 @@ table, th, td {
 
 table {
     border: 1px solid black;
+    position: fixed;
 }
