@@ -1,52 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Dancing+Script:wght@400..700&family=Libertinus+Keyboard&family=Ribeye+Marrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: whitesmoke;
+}
 
 .header {
-    margin-top: 0;
-    background-image: url(../img/1.jpg);
     height: 400px;
-    background-size: cover;
+    background-image: url("../Images/coffee-bgnd.jpeg");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
 }
-body {
-    margin: 0;
-    background-color: bisque;
-/*    background-image: url(../img/india.jpg);*/
-/*opacity: 0.3}*/}
-h1 {
-    font-family: "Covered by your Grace", cursive;
-    font-size: 64px;
+
+.header > h1 {
+    font-size: 100px;
+    font-family: "Covered By Your Grace", cursive;
+    color: #2B1810BF;
     text-align: center;
-    color: darkgreen;
-}
+    padding-top: 130px;
 
-h2 {
-    font-family: "Libertinus Keyboard", system-ui;
-    text-align: center;
 }
-
-.wiki {
-    font-family: "Ribeye Marrow", serif;
-}
-
-.country-image {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 10px;
+.main > table {
+    padding: 0;
 }
 
 .main td {
-    color: dimgray;
+    color: #454;
+    font-weight: 500;
+    padding: 0 10px;
     text-align: justify;
-    padding: 0 5px;
+    text-indent: 32px;
+    line-height: 1.5;
+    background-image: url("../Images/Image20260706185811.png");");
+    /*opacity: 0.3;*/
 }
 
 .main td > h2 {
-    font-size: 32px;
-    font-weight: bold;
+    font-size: 28px;
+    font-weight: 900;
+    background-color: rgb(188 170 164 / 90);
+    padding-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.main td > p {
+    font-weight: 900;
 }
 
 .main td > a {
+    color: #445544;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
     letter-spacing: 2px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+HW_06_TEXT
+1. Нарисуйте перекрывающиеся олимпийские кольца как на флаге
+2. Нарисуйте шахматную доску (поля с буквами и цифрами не нужны)
+3. В соответствии с эскизом оформите CSS для табличной верстки,
+при которой в каждой строке две страны...
+Например отцентрируйте заголовок на фоне чашки, сделайте красивый шрифт для каждого типа надписи, красивый фон для каждой страны и т.д.
+ */
+
