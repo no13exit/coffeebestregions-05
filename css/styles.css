@@ -6,7 +6,7 @@
     height: 400px;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    width: 100%;
 }
 body {
     margin: 0;
@@ -36,17 +36,35 @@ h2 {
     border-radius: 10px;
 }
 
-.main td {
-    color: dimgray;
-    text-align: justify;
-    padding: 0 5px;
+/*.main td {*/
+/*    color: dimgray;*/
+/*    text-align: justify;*/
+/*    padding: 0 5px;*/
+/*}*/
+
+/*.main td > h2 {*/
+/*    font-size: 32px;*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*.main td > a {*/
+/*    letter-spacing: 2px;*/
+/*}*/
+.main {
+    width: 100%;
+    /*display: inline-block;*/
+    position: relative;
 }
 
-.main td > h2 {
-    font-size: 32px;
-    font-weight: bold;
+.left {
+    position: absolute;
+    width: 48%;
+    left: 1%
 }
 
-.main td > a {
-    letter-spacing: 2px;
+.right {
+    position: absolute;
+    width: 48%;
+    right: 1%
 }
+
