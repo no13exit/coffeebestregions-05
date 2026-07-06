@@ -11,7 +11,8 @@
 body {
     margin: 0;
     background-color: bisque;
-}
+/*    background-image: url(../img/india.jpg);*/
+/*opacity: 0.3}*/}
 h1 {
     font-family: "Covered by your Grace", cursive;
     font-size: 64px;
@@ -33,4 +34,19 @@ h2 {
     height: 220px;
     object-fit: cover;
     border-radius: 10px;
+}
+
+.main td {
+    color: dimgray;
+    text-align: justify;
+    padding: 0 5px;
+}
+
+.main td > h2 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.main td > a {
+    letter-spacing: 2px;
 }
