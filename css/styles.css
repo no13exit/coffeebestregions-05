@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Dancing+Script:wght@400..700&family=Libertinus+Keyboard&family=Ribeye+Marrow&display=swap');
 
 .header {
-    margin-top: 0;
     background-image: url(../img/1.jpg);
     height: 400px;
     background-size: cover;
     background-position: center;
     width: 100%;
+    margin: 0 auto 25px auto;
+    border-radius: 10px;
 }
 body {
     margin: 0;
     background-color: bisque;
-/*    background-image: url(../img/india.jpg);*/
-/*opacity: 0.3}*/}
+}
 h1 {
     font-family: "Covered by your Grace", cursive;
     font-size: 64px;
@@ -36,35 +36,33 @@ h2 {
     border-radius: 10px;
 }
 
-/*.main td {*/
-/*    color: dimgray;*/
-/*    text-align: justify;*/
-/*    padding: 0 5px;*/
-/*}*/
 
-/*.main td > h2 {*/
-/*    font-size: 32px;*/
-/*    font-weight: bold;*/
-/*}*/
-
-/*.main td > a {*/
-/*    letter-spacing: 2px;*/
-/*}*/
 .main {
     width: 100%;
-    /*display: inline-block;*/
     position: relative;
+    padding-top: 2px;
+    margin: auto;
+}
+
+.left,
+.right {
+    position: absolute;
+    width: 49%;
 }
 
 .left {
-    position: absolute;
-    width: 48%;
-    left: 1%
+    left: 0;
 }
 
 .right {
-    position: absolute;
-    width: 48%;
-    right: 1%
+    right: 0;
+}
+
+.country-card {
+    background-color: antiquewhite;
+    border: 1px solid darkgreen;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 30px;
 }
 
