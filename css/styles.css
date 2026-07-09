@@ -42,7 +42,9 @@ main {
 .left,
 .right {
     position: absolute;
-    width: 49%;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 2px;
 }
 
 .left {
