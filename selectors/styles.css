@@ -82,15 +82,14 @@ div.rainbow {
     color: black;
 }
 
-/* Каждая полоса становится системой координат
-   для элементов внутри неё */
+/* stripe design and position*/
 .stripe {
     position: relative;
     height: 70px;
     border: 1px solid black;
 }
 
-/* Общие свойства трёх надписей */
+/* stripe content unified design*/
 .left,
 .center,
 .right {
@@ -100,19 +99,19 @@ div.rainbow {
     transform: translateY(-50%);
 }
 
-/* Русская мнемоника слева */
+/* russian left */
 .left {
     left: 20px;
 }
 
-/* Название цвета точно посередине */
+/* color centered (transform!) */
 .center {
     left: 50%;
     transform: translate(-50%, -50%);
     font-weight: bold;
 }
 
-/* Английская мнемоника справа */
+/* english right */
 .right {
     right: 20px;
 }
