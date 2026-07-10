@@ -6,11 +6,6 @@ div div {
 }
 
 
-/*centering text for every stripe after red*/
-div ~ div {
-    text-align: center;
-}
-
 body > h1 {
     text-align: center;
     font-size: 50px;
@@ -85,4 +80,39 @@ div.rainbow {
 .violet {
     background-color: violet;
     color: black;
+}
+
+/* Каждая полоса становится системой координат
+   для элементов внутри неё */
+.stripe {
+    position: relative;
+    height: 70px;
+    border: 1px solid black;
+}
+
+/* Общие свойства трёх надписей */
+.left,
+.center,
+.right {
+    position: absolute;
+    top: 50%;
+    font-size: 20px;
+    transform: translateY(-50%);
+}
+
+/* Русская мнемоника слева */
+.left {
+    left: 20px;
+}
+
+/* Название цвета точно посередине */
+.center {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+}
+
+/* Английская мнемоника справа */
+.right {
+    right: 20px;
 }
