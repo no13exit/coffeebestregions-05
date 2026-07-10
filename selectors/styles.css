@@ -12,19 +12,9 @@ body > h1 {
     font-weight: bold;
 }
 
-/*size for p inside divs (actually stripes here)*/
-div > p {
-    font-size: 20px;
-}
-
 /*english mnemo + size*/
 p + p {
     font-size: 30px
-}
-
-/*center first stripe*/
-div.red {
-    text-align: center;
 }
 
 /*class ending with ru size*/
