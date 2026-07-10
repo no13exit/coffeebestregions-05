@@ -1,0 +1,88 @@
+
+
+/*border for all stripes*/
+div div {
+    border: 1px solid black;
+}
+
+
+/*centering text for every stripe after red*/
+div ~ div {
+    text-align: center;
+}
+
+body > h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+/*size for p inside divs (actually stripes here)*/
+div > p {
+    font-size: 20px;
+}
+
+/*english mnemo + size*/
+p + p {
+    font-size: 30px
+}
+
+/*center first stripe*/
+div.red {
+    text-align: center;
+}
+
+/*class ending with ru size*/
+[class$=ru] {
+    font-size: 40px;
+}
+
+/*all p in h1 italic*/
+h1 ~ p {
+    font-style: italic;
+}
+
+/*center mnemo*/
+p[lang] {
+    text-align: center;
+}
+
+/*big div border*/
+div.rainbow {
+    border: 3px double black;
+}
+
+.red {
+    background-color: red;
+    color: white;
+}
+
+.orange {
+    background-color: orange;
+    color: black;
+}
+
+.yellow {
+    background-color: yellow;
+    color: black;
+}
+
+.green {
+    background-color: green;
+    color: white;
+}
+
+.light-blue {
+    background-color: deepskyblue;
+    color: black;
+}
+
+.blue {
+    background-color: blue;
+    color: white;
+}
+
+.violet {
+    background-color: violet;
+    color: black;
+}
