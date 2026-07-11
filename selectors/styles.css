@@ -146,3 +146,24 @@ button.btn-primary {
 .checkbox-trigger ~ .btn-delete {
     opacity: 0.7;
 }
+
+/* default state: checkbox is not checked */
+.colors-on {
+    opacity: 1;
+    font-weight: bold;
+}
+
+.colors-off {
+    opacity: 0.4;
+}
+
+/* checked state */
+.checkbox-trigger:checked ~ .colors-on {
+    opacity: 0.4;
+    font-weight: normal;
+}
+
+.checkbox-trigger:checked ~ .colors-off {
+    opacity: 1;
+    font-weight: bold;
+}
