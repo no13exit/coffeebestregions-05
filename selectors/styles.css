@@ -105,3 +105,44 @@ div.rainbow {
 .right {
     right: 20px;
 }
+
+.checkbox-trigger:checked ~ .rainbow > div {
+    background-color: white;
+}
+
+.checkbox-trigger:checked ~ .rainbow .red {
+    color: red;
+}
+
+.checkbox-trigger:checked ~ .rainbow .orange {
+    color: orange;
+}
+
+.checkbox-trigger:checked ~ .rainbow .yellow {
+    color: goldenrod;
+}
+
+.checkbox-trigger:checked ~ .rainbow .green {
+    color: green;
+}
+
+.checkbox-trigger:checked ~ .rainbow .light-blue {
+    color: deepskyblue;
+}
+
+.checkbox-trigger:checked ~ .rainbow .blue {
+    color: blue;
+}
+
+.checkbox-trigger:checked ~ .rainbow .violet {
+    color: violet;
+}
+
+button.btn-primary {
+    background-color: black;
+    color: white;
+}
+
+.checkbox-trigger ~ .btn-delete {
+    opacity: 0.7;
+}
