@@ -2,123 +2,103 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0"
-	>
-
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Google Search Form</title>
 </head>
 
 <body>
-
-<h1>Google Search</h1>
-
 <form
 		action="https://www.google.com/search"
 		method="get"
 		target="_blank"
 >
+	<fieldset>
+		<legend>Google Search</legend>
 
-	<p>
-		<label for="search-query">
-			Search query:
-		</label>
+		<p>
+			<label for="search-query">Search query:</label>
 
-		<input
-				type="search"
-				id="search-query"
-				name="q"
-				placeholder="What do you want to find?"
-				required
-		>
-	</p>
+			<input
+					type="search"
+					id="search-query"
+					name="q"
+					required
+			>
+		</p>
 
-	<p>
-		<label for="search-filter">
-			Result type:
-		</label>
-<!--https://support.google.com/websearch/answer/2466433?hl=en-->
-		<select id="search-filter" name="udm">
-			<option value="" selected>Web</option>
-			<option value="36">Books</option>
-			<option value="18">Forums</option>
-			<option value="2">Images</option>
-			<option value="12">News</option>
-			<option value="28">Shopping</option>
-			<option value="39">Short Videos</option>
-			<option value="7">Videos</option>
-		</select>
-	</p>
+		<p>
+			<label for="result-type">Result type:</label>
 
-	<p>
-		<label for="site-search">
-			Search only this site or domain:
-		</label>
+			<select id="result-type" name="udm">
+				<option value="" selected>Web</option>
+				<option value="36">Books</option>
+				<option value="18">Forums</option>
+				<option value="2">Images</option>
+				<option value="12">News</option>
+				<option value="28">Shopping</option>
+				<option value="39">Short Videos</option>
+				<option value="7">Videos</option>
+			</select>
+		</p>
+	</fieldset>
 
-		<input
-				type="text"
-				id="site-search"
-				name="as_sitesearch"
-				placeholder="youtube.com"
-		>
-	</p>
+	<fieldset>
+		<legend>Advanced filters</legend>
 
-	<p>
-		<label for="excluded-words">
-			Exclude these words:
-		</label>
+<!--		extended with paramaters from https://support.google.com/websearch/answer/2466433?hl=en-->
 
-		<input
-				type="text"
-				id="excluded-words"
-				name="as_eq"
-				placeholder="car"
-		>
-	</p>
+		<p>
+			<label for="site-search">Site or domain:</label>
 
-	<p>
-		<label for="last-update">
-			Last update:
-		</label>
+			<input
+					type="text"
+					id="site-search"
+					name="as_sitesearch"
+					placeholder="example.com"
+			>
+		</p>
 
-		<select id="last-update" name="as_qdr">
-			<option value="" selected>Any time</option>
-			<option value="d">Past 24 hours</option>
-			<option value="w">Past week</option>
-			<option value="m">Past month</option>
-			<option value="y">Past year</option>
-		</select>
-	</p>
+		<p>
+			<label for="excluded-words">Exclude words:</label>
 
-	<p>
-		<label for="file-type">
-			File type:
-		</label>
+			<input
+					type="text"
+					id="excluded-words"
+					name="as_eq"
+			>
+		</p>
 
-		<select id="file-type" name="as_filetype">
-			<option value="" selected>
-				Normal web search — any file type
-			</option>
+		<p>
+			<label for="last-update">Last update:</label>
 
-			<option value="pdf">PDF</option>
-			<option value="doc">Microsoft Word</option>
-			<option value="xls">Microsoft Excel</option>
-			<option value="ppt">Microsoft PowerPoint</option>
-			<option value="rtf">Rich Text Format</option>
-			<option value="txt">Text file</option>
-		</select>
-	</p>
+			<select id="last-update" name="as_qdr">
+				<option value="" selected>Any time</option>
+				<option value="d">Past 24 hours</option>
+				<option value="w">Past week</option>
+				<option value="m">Past month</option>
+				<option value="y">Past year</option>
+			</select>
+		</p>
 
-	<button type="submit">
-		Search Google
-	</button>
+		<p>
+			<label for="file-type">Search area or file type:</label>
 
-	<button type="reset">
-		Clear
-	</button>
+			<select id="file-type" name="as_filetype">
+				<option value="" selected>
+					Web — any page or file type
+				</option>
+				<option value="pdf">PDF</option>
+				<option value="doc">Microsoft Word</option>
+				<option value="xls">Microsoft Excel</option>
+				<option value="ppt">Microsoft PowerPoint</option>
+				<option value="rtf">Rich Text Format</option>
+				<option value="txt">Text file</option>
+			</select>
+		</p>
+	</fieldset>
 
+	<button type="submit">Search Google</button>
+	<button type="reset">Clear</button>
 </form>
-
 </body>
 </html>
