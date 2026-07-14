@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+	>
+
+	<title>Search Hub</title>
+
+	<style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            min-height: 100vh;
+
+            font-family: Arial, sans-serif;
+            color: #202124;
+            background-color: #f3f5f9;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .page-header {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            margin-bottom: 10px;
+            font-size: 42px;
+        }
+
+        .page-header p {
+            margin: 0;
+            color: #5f6368;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .card {
+            margin-bottom: 24px;
+            padding: 28px;
+
+            background-color: white;
+            border: 1px solid #dfe3eb;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(32, 33, 36, 0.08);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        .section-description {
+            margin-top: 0;
+            margin-bottom: 24px;
+            color: #5f6368;
+            line-height: 1.5;
+        }
+
+        .search-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 14px 16px;
+            margin-bottom: 20px;
+
+            font-size: 17px;
+            border: 2px solid #cbd1dc;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        .search-input:focus {
+            border-color: #376df6;
+        }
+
+        fieldset {
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        legend {
+            margin-bottom: 12px;
+            font-weight: bold;
+        }
+
+        .engine-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .engine-button,
+        .reset-button,
+        .assistant-link {
+            padding: 12px 18px;
+
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: bold;
+            text-decoration: none;
+
+            border-radius: 9px;
+            cursor: pointer;
+        }
+
+        .engine-button {
+            color: white;
+            background-color: #376df6;
+            border: 2px solid #376df6;
+        }
+
+        .engine-button:hover {
+            background-color: #2458d8;
+            border-color: #2458d8;
+        }
+
+        .ai-button {
+            background-color: #673ab7;
+            border-color: #673ab7;
+        }
+
+        .ai-button:hover {
+            background-color: #512da8;
+            border-color: #512da8;
+        }
+
+        .privacy-button {
+            color: #1d5632;
+            background-color: #e6f4ea;
+            border-color: #a8d5b6;
+        }
+
+        .privacy-button:hover {
+            background-color: #d5eddc;
+            border-color: #7fbf93;
+        }
+
+        .reset-button {
+            color: #454a52;
+            background-color: white;
+            border: 2px solid #cbd1dc;
+        }
+
+        .reset-button:hover {
+            background-color: #f1f3f4;
+        }
+
+        .yandex-button {
+            color: #111111;
+            background-color: #ffcc00;
+            border-color: #ffcc00;
+        }
+
+        .yandex-button:hover {
+            background-color: #efbd00;
+            border-color: #efbd00;
+        }
+
+        .assistant-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .assistant-link {
+            display: inline-block;
+
+            color: #376df6;
+            background-color: white;
+            border: 2px solid #b9c9f4;
+        }
+
+        .assistant-link:hover {
+            color: white;
+            background-color: #376df6;
+            border-color: #376df6;
+        }
+
+        .note {
+            margin-top: 18px;
+            margin-bottom: 0;
+            padding: 12px 14px;
+
+            color: #5f6368;
+            background-color: #f8f9fa;
+            border-left: 4px solid #376df6;
+            border-radius: 4px;
+
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        footer {
+            padding-top: 6px;
+            color: #747981;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 12px;
+            }
+
+            .page-header h1 {
+                font-size: 34px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .engine-button,
+            .reset-button,
+            .assistant-link {
+                width: 100%;
+                text-align: center;
+            }
+        }
+	</style>
+</head>
+
+<body>
+
+<div class="container">
+
+	<header class="page-header">
+		<h1>Search Hub</h1>
+
+		<p>
+			Search the web using traditional search engines
+			or ask an AI-powered answer engine.
+		</p>
+	</header>
+
+	<main>
+
+		<!--
+			Most search engines below accept the user's
+			search text through a URL parameter named "q".
+		-->
+		<section class="card">
+			<h2>Search the web</h2>
+
+			<p class="section-description">
+				Enter one query and choose where you want
+				to search.
+			</p>
+
+			<form
+					action="https://www.google.com/search"
+					method="get"
+					target="_blank"
+			>
+				<label
+						class="search-label"
+						for="main-search"
+				>
+					What are you looking for?
+				</label>
+
+				<input
+						class="search-input"
+						type="search"
+						id="main-search"
+						name="q"
+						placeholder="Enter your search query"
+						maxlength="200"
+						required
+				>
+
+				<fieldset>
+					<legend>Choose a search service</legend>
+
+					<div class="engine-buttons">
+
+						<button
+								class="engine-button"
+								type="submit"
+								formaction="https://www.google.com/search"
+						>
+							Google
+						</button>
+
+						<button
+								class="engine-button"
+								type="submit"
+								formaction="https://www.bing.com/search"
+						>
+							Bing
+						</button>
+
+						<button
+								class="engine-button privacy-button"
+								type="submit"
+								formaction="https://duckduckgo.com/"
+						>
+							DuckDuckGo
+						</button>
+
+						<button
+								class="engine-button"
+								type="submit"
+								formaction="https://search.brave.com/search"
+						>
+							Brave
+						</button>
+
+						<button
+								class="engine-button privacy-button"
+								type="submit"
+								formaction="https://www.ecosia.org/search"
+						>
+							Ecosia
+						</button>
+
+						<button
+								class="engine-button ai-button"
+								type="submit"
+								formaction="https://www.perplexity.ai/search"
+						>
+							Ask Perplexity
+						</button>
+
+						<button
+								class="reset-button"
+								type="reset"
+						>
+							Clear
+						</button>
+
+					</div>
+				</fieldset>
+			</form>
+
+			<p class="note">
+				Google, Bing, and Brave may include
+				AI-generated information in their results.
+				Perplexity is presented separately because
+				it focuses primarily on producing a direct
+				answer with sources.
+			</p>
+		</section>
+
+		<!--
+			Yandex uses a parameter named "text" instead of "q",
+			so it needs its own form in an HTML-only solution.
+		-->
+		<section class="card">
+			<h2>Search with Yandex</h2>
+
+			<p class="section-description">
+				Yandex uses a different form parameter,
+				so it has a separate search field.
+			</p>
+
+			<form
+					action="https://yandex.com/search/"
+					method="get"
+					target="_blank"
+			>
+				<label
+						class="search-label"
+						for="yandex-search"
+				>
+					Yandex search query
+				</label>
+
+				<input
+						class="search-input"
+						type="search"
+						id="yandex-search"
+						name="text"
+						placeholder="Enter your Yandex query"
+						maxlength="200"
+						required
+				>
+
+				<div class="engine-buttons">
+					<button
+							class="engine-button yandex-button"
+							type="submit"
+					>
+						Search with Yandex
+					</button>
+
+					<button
+							class="reset-button"
+							type="reset"
+					>
+						Clear
+					</button>
+				</div>
+			</form>
+		</section>
+
+		<section class="card">
+			<h2>Open an AI assistant</h2>
+
+			<p class="section-description">
+				These links open the assistant, but the query
+				is not transferred automatically in this
+				HTML-only version.
+			</p>
+
+			<nav
+					class="assistant-links"
+					aria-label="AI assistants"
+			>
+				<a
+						class="assistant-link"
+						href="https://gemini.google.com/"
+						target="_blank"
+						rel="noopener noreferrer"
+				>
+					Gemini
+				</a>
+
+				<a
+						class="assistant-link"
+						href="https://chatgpt.com/"
+						target="_blank"
+						rel="noopener noreferrer"
+				>
+					ChatGPT
+				</a>
+
+				<a
+						class="assistant-link"
+						href="https://copilot.microsoft.com/"
+						target="_blank"
+						rel="noopener noreferrer"
+				>
+					Microsoft Copilot
+				</a>
+
+				<a
+						class="assistant-link"
+						href="https://claude.ai/"
+						target="_blank"
+						rel="noopener noreferrer"
+				>
+					Claude
+				</a>
+			</nav>
+		</section>
+
+	</main>
+
+	<footer>
+		<p>
+			Search results open in a new browser tab.
+		</p>
+	</footer>
+
+</div>
+
+</body>
+</html>
